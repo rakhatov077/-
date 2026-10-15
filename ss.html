@@ -1,0 +1,335 @@
+doctype html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#eef4f1" />
+  <title>BAĞDAR AI — мамандыққа апарар жолың</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">B</div>
+        <div>
+          <strong>BAĞDAR AI</strong>
+          <span>мамандыққа апарар жол</span>
+        </div>
+      </div>
+
+      <nav>
+        <button class="nav-item active" data-section="home"><span>⌂</span> Басты бет</button>
+        <button class="nav-item" data-section="test"><span>✦</span> Менің профилім</button>
+        <button class="nav-item" data-section="recommendations"><span>◎</span> Мамандықтар</button>
+        <button class="nav-item" data-section="practice"><span>✓</span> Практика</button>
+        <button class="nav-item" data-section="teacher"><span>◌</span> Оқытушы</button>
+        <button class="nav-item" data-section="ai"><span>✧</span> AI-көмекші</button>
+      </nav>
+
+      <div class="privacy-card">
+        <div class="lock">⌾</div>
+        <strong>Қауіпсіз орта</strong>
+        <p>Мұнда өз ойыңды еркін айта аласың. Дұрыс емес жауап болмайды.</p>
+      </div>
+
+      <div class="student-mini">
+        <div class="avatar">У</div>
+        <div><strong id="sideName">Ученик</strong><span>Жеке кабинет</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-brand"><div class="brand-mark">B</div><strong>BAĞDAR AI</strong></div>
+        <div class="top-actions">
+          <span class="status"><i></i> AI онлайн</span>
+          <button class="icon-btn" id="resetBtn" title="Қайта бастау">↻</button>
+        </div>
+      </header>
+
+      <section id="home" class="section active">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow">AI • образование • выбор</span>
+            <h1>Өзіңе сай мамандықты,<br><em>еркін әрі сенімді сезінетін жолды тап.</em></h1>
+            <p>BAĞDAR AI қызығушылықтарыңды түсінуге, мамандықтарды салыстыруға және оларды практикада байқап көруге көмектеседі — қысымсыз әрі алаңдамай.</p>
+            <div class="hero-buttons">
+              <button class="primary" data-go="test">Бағдар таңдауды бастау <span>→</span></button>
+              <button class="secondary" data-go="ai">AI-мен сөйлесу</button>
+            </div>
+            <div class="trust-row">
+              <span>✓ Бағалаусыз</span><span>✓ Өзіңе ыңғайлы қарқынмен</span><span>✓ Жауапты өзгертуге болады</span>
+            </div>
+          </div>
+          <div class="hero-art">
+            <div class="orb orb-one"></div><div class="orb orb-two"></div>
+            <div class="ai-card">
+              <div class="ai-head"><span class="ai-dot">✦</span><div><strong>BAĞDAR AI</strong><small>сенің көмекшің</small></div><span class="online-dot"></span></div>
+              <div class="ai-bubble">Өзің туралы айтып бер. Мен сені бағаламаймын — менің міндетім саған өзіңді түсінуге көмектесу. 🌿</div>
+              <div class="mini-options"><span>Қызығушылықтар</span><span>Мықты жақтар</span><span>Болашақ</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div><span class="eyebrow">Бұл қалай жұмыс істейді</span><h2>Қызығушылықтан — сенімді таңдауға</h2></div>
+        </div>
+        <div class="steps">
+          <article><b>01</b><div class="step-icon">◌</div><h3>Өзің туралы айт</h3><p>Жасың, қызығушылықтарың, мақсаттарың мен әдеттерің туралы қысқа анкета.</p></article>
+          <article><b>02</b><div class="step-icon">✦</div><h3>Талдау нәтижесін ал</h3><p>AI жауаптарыңды мамандықтармен салыстырып, сәйкестік пайызын көрсетеді.</p></article>
+          <article><b>03</b><div class="step-icon">✓</div><h3>Мамандықты байқап көр</h3><p>Қысқа практикалық тапсырмалар бұл жұмыстың саған ұнайтынын түсінуге көмектеседі.</p></article>
+        </div>
+      </section>
+
+      <section id="test" class="section">
+        <div class="page-head">
+          <div><span class="eyebrow">Менің профилім</span><h2>Танысайық</h2><p>Қалай болса, солай жауап бер. Мұнда жақсы немесе жаман жауап жоқ.</p></div>
+          <div class="progress-wrap"><span id="progressText">1 / 8</span><div class="progress"><i id="progressBar"></i></div></div>
+        </div>
+        <div class="test-layout">
+          <div class="question-card">
+            <div class="question-number" id="qNumber">01</div>
+            <h3 id="questionTitle">Как тебя зовут?</h3>
+            <p id="questionHint">Можно использовать имя или то, как к тебе комфортно обращаться.</p>
+            <div id="answerArea"></div>
+            <div class="question-actions">
+              <button class="secondary" id="prevQuestion">Артқа</button>
+              <button class="primary" id="nextQuestion">Жалғастыру <span>→</span></button>
+            </div>
+          </div>
+          <aside class="safe-panel">
+            <div class="safe-icon">♡</div>
+            <h3>Мұнда өзің бола аласың</h3>
+            <p>BAĞDAR сен үшін шешім қабылдамайды және баға қоймайды. Ол саған сәйкес келуі мүмкін нұсқаларды көруге көмектеседі.</p>
+            <div class="quote">««Дұрыс мамандық — сен үшін таңдалған мамандық емес, өзіңді түсінетін мамандық.»»</div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="recommendations" class="section">
+        <div class="page-head">
+          <div><span class="eyebrow">AI талдауының нәтижесі</span><h2>Мамандықтар для тебя</h2><p id="resultIntro">Жеке нәтижеңді алу үшін сұрақтарға жауап бер.</p></div>
+          <button class="secondary" data-go="test">Жауаптарды өзгерту</button>
+        </div>
+        <div id="recommendationContent">
+          <div class="empty-state"><div>✦</div><h3>Алдымен танысайық</h3><p>Анкетадан өт — осы жерде саған сәйкес бағыттар пайда болады.</p><button class="primary" data-go="test">Анкетадан өту</button></div>
+        </div>
+      </section>
+
+      <section id="practice" class="section">
+        <div class="page-head">
+          <div><span class="eyebrow">Шешім қабылдамас бұрын байқап көр</span><h2>Практикалық тексеру</h2><p>Мамандыққа күмәнің болса, бірден таңдау міндетті емес. Алдымен шағын нақты тапсырманы орындап көр.</p></div>
+        </div>
+        <div id="practiceContent">
+          <div class="practice-grid">
+            <article class="practice-card"><span class="tag">IT</span><h3>Интерфейстің шағын жобасы</h3><p>Представь, что тебе нужно сделать экран приложения для студентов. Продумай 3 кнопки и объясни, зачем они нужны.</p><button class="outline practice-demo">Тапсырманы бастау →</button></article>
+            <article class="practice-card"><span class="tag">Аналитика</span><h3>Заңдылықты тап</h3><p>Посмотри на небольшой набор данных и предложи, какой вывод можно сделать. Важнее ход мысли, чем ответ.</p><button class="outline practice-demo">Тапсырманы бастау →</button></article>
+            <article class="practice-card"><span class="tag">Коммуникация</span><h3>Жағдайды шеш</h3><p>Представь рабочую ситуацию с клиентом. Напиши, как ты объяснишь проблему спокойно и понятно.</p><button class="outline practice-demo">Тапсырманы бастау →</button></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="teacher" class="section">
+        <div class="page-head">
+          <div><span class="eyebrow">Адамның қолдауы</span><h2>Оқытушы</h2><p>AI ұсыныстарды дайындауға көмектеседі, ал оқытушы оларды сенімен бірге талқылай алады.</p></div>
+        </div>
+        <div class="teacher-layout">
+          <div class="teacher-card">
+            <div class="teacher-profile"><div class="teacher-avatar">П</div><div><h3>Сіздің оқытушыңыз</h3><span class="teacher-status">● кеңес беруге дайын</span></div></div>
+            <div class="teacher-note"><strong>Нені талқылауға болады</strong><ul><li>AI неге дәл осы мамандықтарды ұсынды</li><li>Қандай пәндер мен дағдыларды дамыту керек</li><li>Қандай ЖОО мен бағыттарды қарастыруға болады</li><li>Күмәндер мен балама нұсқалар</li></ul></div>
+            <button class="primary full" id="teacherChatBtn">Оқытушымен чат ашу →</button>
+          </div>
+          <div class="chat-card" id="teacherChat">
+            <div class="chat-header"><strong>Оқытушымен чат</strong><span>Құпия түрде</span></div>
+            <div class="messages" id="teacherMessages"><div class="message teacher">Сәлем! Нәтижені талқылағың келсе, мен көмектесуге дайынмын. Кез келген сұрағыңды жаза аласың.</div></div>
+            <div class="chat-input"><input id="teacherInput" placeholder="Хабарлама жазыңыз..." /><button id="teacherSend">↑</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ai" class="section">
+        <div class="page-head">
+          <div><span class="eyebrow">Твой AI-көмекші</span><h2>Жай ғана сөйлесуге болады</h2><p>Не таңдау керегін білмей тұрсың ба? Сені не алаңдататынын айтып бер.</p></div>
+        </div>
+        <div class="ai-chat-large">
+          <div class="chat-header"><div class="ai-title"><span class="ai-dot">✦</span><div><strong>BAĞDAR AI</strong><small>Таңдау жасауға қысым жасамай, түсінуге көмектесемін</small></div></div><span class="status"><i></i> онлайн</span></div>
+          <div class="messages large" id="aiMessages">
+            <div class="message ai">Сәлем! 🌿 Мен BAĞDAR AI-мын. Мамандық таңдауды бірге сабырлы түрде талқылайық. Нәтиже туралы сұрай аласың, күмәніңді айта аласың немесе «не таңдарымды білмеймін» деп бастай аласың.</div>
+          </div>
+          <div class="suggestions"><button>Не таңдарымды білмеймін</button><button>Маған IT неге сәйкес келеді?</button><button>Ал нәтиже маған ұнамаса ше?</button></div>
+          <div class="chat-input"><input id="aiInput" placeholder="Сізді не алаңдататынын жазыңыз..." /><button id="aiSend">↑</button></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script>
+    const questions = [
+      {title:"Атың кім?", hint:"Өзіңе қалай ыңғайлы болса, солай жаз.", type:"text", key:"name", placeholder:"Мысалы, Амина"},
+      {title:"Жасың қаншада?", hint:"Жасың оқу кезеңің мен жақын мақсаттарыңды ескеруге көмектеседі.", type:"number", key:"age", placeholder:"Мысалы, 20"},
+      {title:"Қайда оқуға түскің келеді немесе қазір қайда оқып жүрсің?", hint:"ЖОО, колледж, мектеп немесе бағытың белгілі болса, жаза аласың.", type:"text", key:"study", placeholder:"Мысалы, MITU, Software Engineering"},
+      {title:"Саған шын мәнінде не қызық?", hint:"Өзіңе ұнайтын бірнеше нұсқаны таңда. Бірнеше жауап белгілеуге болады.", type:"multi", key:"interests", options:["Технология және IT","Адамдар және қарым-қатынас","Дизайн және шығармашылық","Математика және логика","Бизнес және қаржы","Ғылым және зерттеу","Адамдарға көмектесу","Медиа және контент"]},
+      {title:"Бос уақытыңда әдетте немен айналысасың?", hint:"«Дұрыс» жауап іздеме — бізге сенің шынайы қызығушылығың маңызды.", type:"multi", key:"free", options:["Компьютерде отырамын","Контент көремін/жасаймын","Адамдармен сөйлесемін","Спортпен айналысамын","Оқимын және жаңа нәрсе үйренемін","Сурет саламын / ойлап табамын","Ойын ойнаймын","Басқаларға бір нәрсе ұйымдастырамын"]},
+      {title:"Жұмыста саған қайсысы жақынырақ?", hint:"Өзіңе жайлы болатын жұмыс түрін таңда.", type:"single", key:"work", options:["Жасау және ойлап табу","Талдау және шешім іздеу","Адамдармен сөйлесу және көмектесу","Ұйымдастыру және басқару","Технологиялармен жұмыс істеу","Зерттеу және жаңа нәрсе үйрену"]},
+      {title:"Қандай жұмыс ортасы саған ыңғайлы?", hint:"Бірнеше нұсқаны таңдауға болады.", type:"multi", key:"environment", options:["Тыныш, өз бетіммен","Командада","Көп қарым-қатынас","Нақты тапсырмалар","Еркіндік және шығармашылық","Қашықтан / компьютерде"]},
+      ];
+
+    const professions = [
+      {name:"Frontend-разработчик", icon:"</>", desc:"Сайттар мен цифрлық интерфейстерді жасау, HTML, CSS, JavaScript және өнім логикасымен жұмыс.", base:0},
+      {name:"UX/UI-дизайнер", icon:"◈", desc:"Қолдануға ыңғайлы цифрлық өнімдерді жобалау: идеядан бастап пайдаланушы зерттеуі мен интерфейске дейін.", base:1},
+      {name:"Data Analyst", icon:"▥", desc:"Деректермен жұмыс, заңдылықтарды іздеу, визуализация және бизнеске арналған қорытынды дайындау.", base:2},
+      {name:"Project Manager", icon:"◌", desc:"Команда мен жобаны ұйымдастыру, қарым-қатынас, жоспарлау және нәтижені бақылау.", base:3},
+      {name:"Cybersecurity Specialist", icon:"⌾", desc:"Жүйелер мен ақпаратты қорғау, тәуекелдерді талдау, осалдықтарды іздеу және қауіпсіздікті қамтамасыз ету.", base:4}
+    ];
+
+    let state = JSON.parse(localStorage.getItem("bagdarState") || "{}");
+    let currentQ = 0;
+
+    const $ = s => document.querySelector(s);
+    const $$ = s => [...document.querySelectorAll(s)];
+
+    function save(){ localStorage.setItem("bagdarState", JSON.stringify(state)); }
+    function go(section){
+      $$(".section").forEach(x=>x.classList.remove("active"));
+      $$(".nav-item").forEach(x=>x.classList.remove("active"));
+      $("#" + section)?.classList.add("active");
+      document.querySelector(`[data-section="${section}"]`)?.classList.add("active");
+      if(section==="recommendations") renderResults();
+      if(section==="practice") renderPractice();
+      window.scrollTo({top:0, behavior:"smooth"});
+    }
+    $$(".nav-item").forEach(b=>b.addEventListener("click",()=>go(b.dataset.section)));
+    $$("[data-go]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.go)));
+
+    function renderQuestion(){
+      const q=questions[currentQ], ans=state[q.key];
+      $("#qNumber").textContent=String(currentQ+1).padStart(2,"0");
+      $("#progressText").textContent=`${currentQ+1} / ${questions.length}`;
+      $("#progressBar").style.width=`${((currentQ+1)/questions.length)*100}%`;
+      $("#questionTitle").textContent=q.title;
+      $("#questionHint").textContent=q.hint;
+      const area=$("#answerArea"); area.innerHTML="";
+      if(q.type==="text" || q.type==="number"){
+        const input=document.createElement("input"); input.className="big-input"; input.type=q.type; input.placeholder=q.placeholder; input.value=ans||"";
+        input.addEventListener("input",e=>{state[q.key]=e.target.value; save();}); area.append(input);
+        setTimeout(()=>input.focus(),50);
+      } else {
+        const grid=document.createElement("div"); grid.className="options-grid";
+        (q.options||[]).forEach(opt=>{
+          const btn=document.createElement("button"); btn.className="option"; btn.textContent=opt;
+          const selected=q.type==="single" ? ans===opt : Array.isArray(ans)&&ans.includes(opt);
+          if(selected) btn.classList.add("selected");
+          btn.onclick=()=>{
+            if(q.type==="single"){state[q.key]=opt;}
+            else {
+              let a=Array.isArray(state[q.key])?[...state[q.key]]:[];
+              if(a.includes(opt)) a=a.filter(x=>x!==opt);
+              else if(q.type==="multi2" && a.length>=2) {showToast("Ең көбі 2 нұсқаны таңда");return;}
+              else a.push(opt);
+              state[q.key]=a;
+            }
+            save(); renderQuestion();
+          };
+          grid.append(btn);
+        }); area.append(grid);
+      }
+      $("#prevQuestion").style.visibility=currentQ===0?"hidden":"visible";
+      $("#nextQuestion").innerHTML=currentQ===questions.length-1?"Нәтижені алу ✦":"Жалғастыру <span>→</span>";
+    }
+    $("#prevQuestion").onclick=()=>{if(currentQ>0){currentQ--;renderQuestion();}};
+    $("#nextQuestion").onclick=()=>{
+      const q=questions[currentQ], a=state[q.key];
+      const valid=(Array.isArray(a)?a.length>0:String(a||"").trim().length>0);
+      if(!valid){showToast("Бұл сұраққа жауап бер — сенің жауабың маңызды 🌿");return;}
+      if(currentQ<questions.length-1){currentQ++;renderQuestion();}
+      else {state.completed=true;save();go("recommendations");}
+    };
+
+    function scoreProfession(p){
+      const i=state.interests||[], f=state.free||[], w=state.work||"", e=state.environment||[], v=state.values||[];
+      let s=52 + Math.floor(Math.random()*5);
+      if(p.name.includes("Frontend")) s += i.includes("Технологии и IT")*16 + i.includes("Математика и логика")*5 + f.includes("Сижу за компьютером")*7 + w.includes("Работать с технологиями")*10 + e.includes("Удалённо / за компьютером")*5;
+      if(p.name.includes("UX")) s += i.includes("Дизайн и творчество")*17 + i.includes("Люди и общение")*7 + f.includes("Рисую / придумываю")*9 + w.includes("Создавать и придумывать")*10 + e.includes("Свобода и творчество")*6;
+      if(p.name.includes("Data")) s += i.includes("Математика и логика")*18 + i.includes("Технологии и IT")*8 + f.includes("Читаю и изучаю новое")*7 + w.includes("Анализировать и искать решения")*13;
+      if(p.name.includes("Project")) s += i.includes("Люди и общение")*14 + i.includes("Бизнес и деньги")*8 + f.includes("Организую что-то для других")*12 + w.includes("Организовывать и руководить")*13 + e.includes("Много общения")*6;
+      if(p.name.includes("Cyber")) s += i.includes("Технологии и IT")*16 + i.includes("Математика и логика")*9 + i.includes("Наука и исследования")*6 + w.includes("Анализировать и искать решения")*10 + v.includes("Стабильность")*4;
+       if(p.name.includes("Cyber")) s += i.includes("Медецина и логика")*16 + i.includes("Дизайн и рисование")*9 + i.includes("Преподаватель и разработчик")*6 + w.includes("Госс служба и искать решения")*10 + v.includes("Стабильность")*4;
+      return Math.min(97,s);
+    }
+
+    function getResults(){
+      if(!state.completed) return [];
+      let results=professions.map(p=>({...p,score:scoreProfession(p)})).sort((a,b)=>b.score-a.score);
+      const stored=JSON.parse(localStorage.getItem("bagdarResults")||"null");
+      if(stored && stored.answersHash===JSON.stringify(state)) return stored.results;
+      localStorage.setItem("bagdarResults",JSON.stringify({answersHash:JSON.stringify(state),results}));
+      return results;
+    }
+
+    function renderResults(){
+      if(!state.completed){$("#recommendationContent").innerHTML=`<div class="empty-state"><div>✦</div><h3>Алдымен танысайық</h3><p>Анкетадан өт — осы жерде саған сәйкес бағыттар пайда болады.</p><button class="primary" data-go="test">Анкетадан өту</button></div>`; $$("[data-go]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.go))); return;}
+      const r=getResults(), top=r[0];
+      $("#resultIntro").textContent=`По твоим ответам AI видит наиболее сильное сәйкестік с ${top.name}. Но окончательный выбор всегда за тобой.`;
+      $("#recommendationContent").innerHTML=`
+        <div class="top-result">
+          <div class="top-icon">${top.icon}</div>
+          <div class="top-info"><span class="match-label">№1 • ең жоғары сәйкестік</span><h3>${top.name}</h3><p>${top.desc}</p><div class="match-bar"><i style="width:${top.score}%"></i></div><strong>${top.score}% сәйкестік</strong></div>
+          <button class="primary" onclick="go('practice')">Попробовать профессию →</button>
+        </div>
+        <div class="result-note"><span>💡</span><div><strong>Нәтижеге сенімді емессің бе?</strong><p>Бұл қалыпты жағдай. Төменде тағы 4 сәйкес нұсқа бар. Оларды салыстырып немесе практикалық тапсырмаларды орындап көре аласың.</p></div></div>
+        <h3 class="subhead">Тағы 4 сәйкес бағыт</h3>
+        <div class="profession-list">${r.slice(1).map((x,idx)=>`<article class="profession-row"><div class="rank">${idx+2}</div><div class="p-icon">${x.icon}</div><div class="p-main"><h4>${x.name}</h4><p>${x.desc}</p></div><div class="p-score"><strong>${x.score}%</strong><span>сәйкестік</span></div><button class="small-btn" onclick="showPractice('${x.name}')">Тексеру →</button></article>`).join("")}</div>`;
+    }
+
+    function renderPractice(){
+      const r=state.completed?getResults():[];
+      if(r.length){
+        $("#practiceContent").innerHTML=`<div class="practice-intro"><div><strong>Кездейсоқ таңдау жасама.</strong><p>Мамандықты таңдап, қысқа тапсырманы орында. Содан кейін оның саған қаншалықты қызықты болғанын бағала.</p></div><span>5 бағыт</span></div><div class="practice-grid">${r.map((x,i)=>`<article class="practice-card"><div class="practice-top"><span class="tag">${i===0?"Ұсынамыз":`${x.score}%`}</span><span>${x.icon}</span></div><h3>${x.name}</h3><p>${practiceText(x.name)}</p><button class="outline practice-start" data-prof="${x.name}">Тапсырманы бастау →</button></article>`).join("")}</div>`;
+        $$(".practice-start").forEach(b=>b.onclick=()=>showPractice(b.dataset.prof));
+      }
+      $$(".practice-demo").forEach(b=>b.onclick=()=>showToast("Тапсырма ашылды — оны көмексіз орындап көр ✦"));
+    }
+    function practiceText(name){
+      if(name.includes("Frontend")) return "Собери идею экрана сайта: назови 3 элемента интерфейса и объясни, что произойдёт после нажатия.";
+      if(name.includes("UX")) return "Представь мобильное приложение для студентов. Нарисуй словами главный экран и подумай, что пользователю будет удобно.";
+      if(name.includes("Data")) return "Представь таблицу с оценками студентов. Определи, какие 3 показателя стоит сравнить и какой вывод из них можно сделать.";
+      if(name.includes("Project")) return "Команда из 3 человек должна сделать проект за неделю. Распредели задачи, сроки и предложи, как контролировать прогресс.";
+      return "Представь, что нужно защитить аккаунт студента. Назови 3 угрозы и предложи способы защиты.";
+    }
+    window.showPractice=function(name){
+      go("practice");
+      setTimeout(()=>showToast(`Практика: ${name}. Тапсырманы орындап, кейін өз әсеріңді бағала.`),250);
+    };
+
+    function addMessage(container, text, cls){const d=document.createElement("div");d.className=`message ${cls}`;d.textContent=text;container.append(d);container.scrollTop=container.scrollHeight;}
+    function aiReply(text){
+      const t=text.toLowerCase();
+      if(t.includes("не знаю")||t.includes("сомне")) return "Бұл қалыпты жағдай. Бірден шешім қабылдаудың қажеті жоқ. 5 нұсқаны қарап, 1–2 мамандық бойынша практикалық тапсырманы орындап көр. Нақты тапсырмаға реакцияң бір тесттен де көп ақпарат береді.";
+      if(t.includes("it")||t.includes("программ")) return "IT — тек бағдарламалау емес. Мұнда әзірлеу, UX/UI, аналитика, жобаларды басқару және киберқауіпсіздік бар. Сондықтан алдымен қызығушылығың мен ойлау тәсіліңді, содан кейін нақты мамандықты қарастырамыз.";
+      if(t.includes("результат")||t.includes("професс")) return state.completed ? `Жауаптарыңа сәйкес қазір бірінші орында ${getResults()[0].name}. Бірақ бұл тек ұсыныс, соңғы шешім емес. Егер ұнамаса — келесі төрт нұсқамен салыстырып, практиканы орындап көр.` : "Пройди короткую анкету, и я смогу объяснить результат на основе твоих ответов.";
+      return "Толығырақ айтып бер. Мысалы: не істеген ұнайды, не саған оңай келеді, оқуда не ұнамайды немесе қандай жұмысты мүлде қаламайсың. Мен мұны мамандық бағыттарына бөліп түсінуге көмектесемін.";
+    }
+    function sendAI(){
+      const input=$("#aiInput"), text=input.value.trim(); if(!text)return;
+      addMessage($("#aiMessages"),text,"user"); input.value="";
+      setTimeout(()=>addMessage($("#aiMessages"),aiReply(text),"ai"),400);
+    }
+    $("#aiSend").onclick=sendAI; $("#aiInput").addEventListener("keydown",e=>{if(e.key==="Enter")sendAI();});
+    $$(".suggestions button").forEach(b=>b.onclick=()=>{$("#aiInput").value=b.textContent;sendAI();});
+
+    $("#teacherChatBtn").onclick=()=>{$("#teacherChat").scrollIntoView({behavior:"smooth",block:"center"});$("#teacherInput").focus();};
+    $("#teacherSend").onclick=sendTeacher;
+    $("#teacherInput").addEventListener("keydown",e=>{if(e.key==="Enter")sendTeacher();});
+    function sendTeacher(){const i=$("#teacherInput"),t=i.value.trim();if(!t)return;addMessage($("#teacherMessages"),t,"user");i.value="";setTimeout(()=>addMessage($("#teacherMessages"),"Жазғаныңа рақмет. Мұны бірге сабырлы түрде талқылайық. Нұсқаларды салыстырып, келесі қадамды анықтауға көмектесе аламын.","teacher"),500);}
+
+    function showToast(text){const t=$("#toast");t.textContent=text;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2600);}
+    $("#resetBtn").onclick=()=>{if(confirm("Бағдар таңдауды бастау заново?")){localStorage.removeItem("bagdarState");localStorage.removeItem("bagdarResults");state={};currentQ=0;renderQuestion();go("home");showToast("Профиль очищен");}};
+    document.addEventListener("click",e=>{if(e.target.matches("[data-go]")){e.preventDefault();}});
+
+    $("#sideName").textContent=state.name||"Ученик";
+    renderQuestion();
+  </script>
+</body>
+</html>
